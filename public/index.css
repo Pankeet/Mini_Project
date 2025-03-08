@@ -1,0 +1,158 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Outfit';
+}
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(closest-corner, #595959, #0C0C0C);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+#logo-image {
+    width:50rem;
+}
+
+@media (max-width:1100px) {
+    body
+    {
+        flex-direction:column;
+    }
+    #logo-image
+    {
+        width: 255px;
+    }
+}
+
+#login-div {
+    display: flex;
+    justify-content: center;
+}
+
+#main-block {
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#main-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+#login-button {
+    height: 35px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: #A0A0A0;
+}
+
+.gray-text {
+    color: #C4BBBB;
+}
+
+#Or-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#or-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+#or-links>div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap:1rem;
+}
+
+#or-links>div>img {
+    height: 30px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+.extra-space {
+    width: 5rem;
+    border: 1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    border-image-source: linear-gradient(to left, #D9D9D9, #1A1111);
+}
+
+
+
+#forgot-pass {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+
+
+.input-entry {
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.data-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    padding: 0.75rem 5rem 0.75rem 1rem;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    color:gray;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: gray;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.data-input:focus+label,
+.data-input:not(:placeholder-shown)+label {
+    top: -25px;
+    left: 5px;
+    font-size: 18px;
+    padding: 0 5px;
+}
