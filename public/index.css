@@ -24,7 +24,9 @@ body {
 }
 
 #logo-image {
-    width:50rem;
+    width:auto ;
+    height : auto ;
+    object-fit: cover;
 }
 
 @media (max-width:1100px) {
