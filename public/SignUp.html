@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <img src="/public/img/logo.png" alt="Logo" id="logo-image">
+    </div>
+    <div>
+        <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow'; margin : 20px ; display :flex ; justify-content: center;">SignUp!</h2>
+        <div id="main-block">
+            <div id="main-inputs">
+                <div class="input-entry">
+                    <input type="email" placeholder="" class="data-input" id="email">
+                    <label for="email">email</label>
+                </div>
+                <div class="input-entry">
+                    <input type="password" placeholder="" class="data-input" id="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="input-entry">
+                    <input type="text" placeholder="" class="data-input" id="fname">
+                    <label for="Name">Full Name</label>
+                </div>
+                <div class="input-entry">
+                    <input type="number" placeholder="" class="data-input" id="pnumber">
+                    <label for="Phone Number">Phone Number</label>
+                </div>
+                <div class="input-entry">
+                    <input type="text" placeholder="" class="data-input" id="address">
+                    <label for="Address">Address</label>
+                </div>
+                <div id="Or-section">
+                    <div class="extra-space1"></div>
+                    <span class="gray-text">Or continue with</span>
+                    <div class="extra-space2">
+                    </div>
+                </div>
+
+                <div id="login-div">
+                    <button onclick="signup()" id="login-button">SignUp</button>
+                </div>
+
+                <div style = "display: flex; justify-content: center;">
+                    
+                    <img src="./img/google.jpg" style = "cursor:pointer ; 
+                    border-radius: 50% ; width: 36px; height: 36px; margin :10px"/>
+
+                    <img src="./img/fb.jpg" style = "cursor:pointer ; 
+                    border-radius: 50% ; width: 36px; height: 36px; margin :10px"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

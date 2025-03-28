@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="index.css">
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <script src="script.js"></script>
     <div>
         <img src="/public/img/logo.png" alt="Logo" id="logo-image">
     </div>
@@ -23,9 +23,9 @@
                 <div class="input-entry">
                     <input type="text" placeholder="" class="data-input" id="password">
                     <label for="password">Password</label>
-                    <div id="forgot-pass">
-                        <span>Forgot password?</span>
-                    </div>
+                </div>
+                <div id="forgot-pass">
+                    <span>Forgot password?</span>
                 </div>
             </div>
             <div id="login-div">
@@ -34,18 +34,19 @@
         </div>
         <div id="footer">
             <div id="Or-section">
-                <div class="extra-space"></div>
+                <div class="extra-space1"></div>
                 <span class="gray-text">Or continue with</span>
-                <div class="extra-space"></div>
+                <div class="extra-space2"></div>
             </div>
             <div id="or-links">
                 <div style="cursor: pointer;">
-                    <img src="/public/img/google.jpg" alt="">
+                    <img src="/public/img/google.jpg" alt="Hello World">
                     <img src="/public/img/fb.jpg" alt="">
+                    
                 </div>
                 <div>
                     <p><span class="gray-text">Don't have an account?</span>
-                        <strong style="cursor: pointer;">Sign up</strong></p>
+                        <strong style="cursor: pointer;"><a href = "SignUp.html">Sign up </a></strong></p>
                 </div>
             </div>
         </div>

@@ -28,6 +28,8 @@ const userRouter = Router();
         })
     });
 
+
+    // SignIn Endpoint
     userRouter.post('/signin', async function(req, res){
        const { email , password } = req.body;
        

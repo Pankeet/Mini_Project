@@ -12,18 +12,31 @@ const user = new Schema({
     password : String ,
     fullName : String ,
     phoneNum : {type: Number , unique:true} , 
-    address : String 
+    address : String , 
+} , {timestamps : true });
+
+// User 's Purchases
+const Purchases = new Schema({
+    ItemId : ObjectId ,
+    modelNo : {type : String , unique : true},
+    price : Number ,
+    userId : ObjectId,
 })
 
-// Shoes 
+// Shoes  
 const soles = new Schema({
     modelNo : {type : String , unique : true},
-    color : String,
-    country_of_origin : String 
+    colors : String,
+    price : Number ,
+    country_of_origin : String ,
 })
 
+// Create Models
 const UserModel = mongoose.model('users' , user);
+const UserPurchaseModel = mongoose.model('Purchases' , Purchases);
+const SolesModel = mongoose.model('soles' , soles);
+
 // Export the User Model 
 module.exports = {
-    UserModel
+    UserModel , UserPurchaseModel , SolesModel
 }
