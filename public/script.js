@@ -13,11 +13,12 @@ async function signup() {
 
         if (response.status === 200) {  
             alert("SignUp Successful, Congrats! New User Created");
-            window.location.href = "./signin.html"; 
+            window.location.href = "./HomePage.html"; 
         }
+    } 
 
-    } catch (error) {
-        document.getElementById('main-inputs').innerHTML = "Unable to create user";
+    catch (error) {
+        document.getElementById('main-inputs').innerHTML = error.response?.data?.message || "User Cannot be Created ! Please Try Again Later";
     }
 }
 
@@ -26,30 +27,20 @@ async function signin(){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    try{
+   try{
         let response = await axios.post("http://localhost:1011/user/signin",{
             email : email  , password : password
         });
     
-        if(response.status == 200){
+        if(response.status === 200){
         localStorage.setItem("token", response.data.token);
         alert("SignIn Successfully");
-        render(response.data.message);
-        }
-        else{
-            render(response.data.message);
+        document.getElementById('forgot-pass').innerHTML = response.data.message;
         }
     }
     catch(error){
-        document.getElementById('forgot-pass').innerHTMl = "Error ! Try Signing In Again After some time";
+        document.getElementById('forgot-pass').innerHTML = error.response?.data?.message || "Please Try Again Later";
     }
-}
-
-function render(response){
-    document.getElementById('forgot-pass').innerHTML = "";
-    const newData = document.createElement('div');
-    newData.innerHTML = response ;
-    document.getElementById("forgot-pass").append(newData);
 }
 
 

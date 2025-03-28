@@ -18,17 +18,23 @@ const userRouter = Router();
                 phoneNum,
                 address
             })
+
+            res.json({
+                message : "SignUp Successful"
+            })
         }
-        catch(e){
-            return res.status(400).send("User Already Exsists");
+        catch(error){
+            console.log(error);
+            return res.status(400).json({
+                message : "User Already Exsists"
+            }
+            );
         }
 
-        res.json({
-            message : "SignUp Successful"
-        })
+        
     });
 
-
+    
     // SignIn Endpoint
     userRouter.post('/signin', async function(req, res){
        const { email , password } = req.body;
