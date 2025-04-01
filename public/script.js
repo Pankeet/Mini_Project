@@ -22,7 +22,7 @@ async function signup() {
     }
 }
 
-// SignIN
+// SignIN 
 async function signin(){
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -43,4 +43,6 @@ async function signin(){
     }
 }
 
-
+async function googleLogin(){
+    window.location.href = "http://localhost:1011/auth/google";
+}
